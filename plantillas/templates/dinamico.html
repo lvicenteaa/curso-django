@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Dinamica</title>
+</head>
+<body>
+  <h1>Hello</h1>
+    <p>{{ name }}</p>
+    <p>{{ categories }}</p>
+    <ul>
+        {# Esto es un comentario #}
+        {# comment #}
+            hello esto es un comentario
+        {# endcoment #}
+        {% for category in categories %}
+            {% if category == 'code' %}
+                <li><b>{{ category|upper }}</b></li>
+            {% else %}
+                <li>{{ category }}</li>
+            {% endif %}
+        {% endfor %}
+        <p>Total de categorias: {{ categories|length }}</p>
+    </ul>
+</body>
+</html>
